@@ -40,9 +40,15 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    dynamicFeatures += setOf(":ChatFeature")
+
+    hilt {
+        enableAggregatingTask = false
+    }
 }
 
 dependencies {
+    implementation(project(":core"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -78,9 +84,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.koin.android)
-
-//    implementation(libs.dagger)
-//    ksp(libs.dagger.compiler)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)

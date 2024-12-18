@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "CapstoneAndroidExpert"
 include(":app")
- 
+include(":ChatFeature")
+include(":core")

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="30dp"
+    android:layout_marginHorizontal="4dp"
+    app:cardCornerRadius="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
@@ -15,19 +17,27 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/image_product"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            app:shapeAppearanceOverlay="@style/RoundedSquare"
-            android:src="@color/oren" />
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@color/oren"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedSquare" />
 
         <TextView
             android:id="@+id/tv_product_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="8dp"
-            android:text="Mulyono"
+            android:gravity="center"
             android:fontFamily="@font/opensans_bold"
-            android:textSize="26sp"/>
+            android:text="Mulyono"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_product"
+            tools:layout_editor_absoluteX="16dp" />
 
         <TextView
             android:id="@+id/tv_category"
@@ -35,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Category"
             android:fontFamily="@font/opensans_regular"
-            android:textSize="16sp"/>
+            android:textSize="12sp"/>
 
         <TextView
             android:id="@+id/tv_price"
@@ -45,7 +55,7 @@
             android:layout_marginBottom="12dp"
             android:text="@string/dollar_value"
             android:fontFamily="@font/opensans_bold"
-            android:textSize="20sp"/>
+            android:textSize="16sp"/>
 
     </LinearLayout>
 
