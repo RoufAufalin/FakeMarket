@@ -15,4 +15,9 @@
     <string name="product_desc">ini adalah deskripsi</string>
     <string name="beli">Beli</string>
     <string name="title_chatfeature">ChatFeature</string>
+    <string name="tambahkan_ke_keranjang">Tambahkan Ke Keranjang?</string>
+    <string name="yakin">Apakah Anda Yakin?</string>
+    <string name="yes">Iya</string>
+    <string name="no">Tidak</string>
+    <string name="tambahkan_ke_keranjangg">+ Keranjang</string>
 </resources>

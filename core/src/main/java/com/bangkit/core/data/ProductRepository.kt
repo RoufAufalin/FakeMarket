@@ -60,4 +60,18 @@ class ProductRepository @Inject constructor(
         }
     }
 
+    override fun setCart(product: Product, newState: Boolean) {
+        val productEntity = DataMapper.mapDomainToEntity(product)
+        appExecutors.diskIO().execute {
+            localDataSource.setCart(productEntity, newState)
+        }
+    }
+
+    override fun getAllCart(): Flow<List<Product>> {
+        return localDataSource.getAllCart().map {
+            DataMapper.mapEntitiesToDomain(it)
+        }
+    }
+
+
 }

@@ -16,7 +16,7 @@ object DataMapper {
                 category = it.category,
                 image = it.image,
                 rating = it.rating.rate,
-                rate = it.rating.count
+                rate = it.rating.count,
             )
             tourismList.add(tourism)
         }
@@ -35,7 +35,8 @@ object DataMapper {
                 image = it.image,
                 rating = it.rating,
                 rate = it.rate,
-                favorite = it.favorite
+                favorite = it.favorite,
+                cart = it.cart
             )
         }
 
@@ -48,6 +49,7 @@ object DataMapper {
         image = input.image,
         rating = input.rating,
         rate = input.rate,
-        favorite = input.favorite
+        favorite = input.favorite,
+        cart = input.cart
     )
 }

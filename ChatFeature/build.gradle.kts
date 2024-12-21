@@ -22,6 +22,10 @@ android {
         jvmTarget = "1.8"
     }
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -59,6 +63,7 @@ dependencies {
     implementation(libs.recyclerview)
     implementation(libs.material)
     implementation(libs.glide)
+
 
     implementation(libs.room.runtime)
     ksp(libs.room.compiler)

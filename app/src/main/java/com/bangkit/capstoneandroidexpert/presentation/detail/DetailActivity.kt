@@ -3,9 +3,12 @@ package com.bangkit.capstoneandroidexpert.presentation.detail
 import android.content.Context
 import android.nfc.NfcAdapter.EXTRA_DATA
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.content.IntentCompat.getParcelableExtra
@@ -39,7 +42,12 @@ class DetailActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Data not found", Toast.LENGTH_SHORT).show()
         }
+
         statusFavorite(product!!.favorite)
+
+        binding.btnBuy.setOnClickListener {
+            showConfirmPurchase(product)
+        }
 
         binding.topAppBar.setNavigationOnClickListener {
             onBackPressed()
@@ -78,6 +86,27 @@ class DetailActivity : AppCompatActivity() {
         } else {
             binding.favorite.setImageDrawable(ContextCompat.getDrawable(this, R.drawable.baseline_favorite_border_24))
         }
+    }
+
+    private fun showConfirmPurchase(product: Product) {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.confirmation_dialog, null)
+        val btnYes = dialogView.findViewById<View>(R.id.btn_yes)
+        val btnCancel = dialogView.findViewById<View>(R.id.btn_no)
+
+        val alertDialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        btnYes.setOnClickListener {
+            viewModel.setCart(product, true)
+            alertDialog.dismiss()
+        }
+
+        btnCancel.setOnClickListener {
+            alertDialog.dismiss()
+        }
+
+        alertDialog.show()
     }
 
 

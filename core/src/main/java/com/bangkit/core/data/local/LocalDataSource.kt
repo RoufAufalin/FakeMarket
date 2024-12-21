@@ -15,5 +15,12 @@ class LocalDataSource @Inject constructor(private val productDao: ProductDao){
         product.favorite = newState
         productDao.setFavorite(product)
     }
+    fun setCart(product: ProductEntity, newState: Boolean) {
+        product.cart = newState
+        productDao.setCart(product)
+    }
+
+    fun getAllCart() = productDao.getAllCart()
+
 
 }

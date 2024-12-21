@@ -27,6 +27,9 @@ data class ProductEntity (
     var rate: Int,
 
     @ColumnInfo(name = "favorite")
-    var favorite: Boolean = false
+    var favorite: Boolean = false,
+
+    @ColumnInfo(name = "cart")
+    var cart: Boolean = false
 
 ) : Parcelable

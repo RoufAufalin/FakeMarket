@@ -13,4 +13,8 @@ class ProductInteractor @Inject constructor(private val productRepository: IProd
 
     override fun setFavorite(product: Product, newState: Boolean) = productRepository.setFavorite(product, newState)
 
+    override fun setCart(product: Product, newState: Boolean) = productRepository.setCart(product, newState)
+
+    override fun getAllCart(): Flow<List<Product>> = productRepository.getAllCart()
+
 }

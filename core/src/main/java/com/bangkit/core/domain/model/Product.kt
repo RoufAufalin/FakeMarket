@@ -14,5 +14,6 @@ data class Product (
     var image: String,
     var rating: Double,
     var rate: Int,
-    var favorite: Boolean
+    var favorite: Boolean,
+    var cart: Boolean
 ) : Parcelable

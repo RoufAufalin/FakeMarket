@@ -15,4 +15,8 @@ class DetailViewModel @Inject constructor(private val productUseCase: ProductUse
         productUseCase.setFavorite(product, newState)
     }
 
+    fun setCart(product: Product, newState: Boolean) {
+        productUseCase.setCart(product, newState)
+    }
+
 }

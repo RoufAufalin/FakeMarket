@@ -14,4 +14,8 @@ interface IProductRepository {
 
     fun setFavorite(product: Product, newState: Boolean)
 
+    fun setCart(product: Product, newState: Boolean)
+
+    fun getAllCart(): Flow<List<Product>>
+
 }

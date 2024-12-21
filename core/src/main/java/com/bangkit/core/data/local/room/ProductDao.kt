@@ -24,4 +24,12 @@ interface ProductDao {
 
     @Update
     fun setFavorite(product: ProductEntity)
+
+    @Update
+    fun setCart(product: ProductEntity)
+
+    @Query("SELECT * FROM product WHERE cart = 1")
+    fun getAllCart(): Flow<List<ProductEntity>>
+
+
 }
