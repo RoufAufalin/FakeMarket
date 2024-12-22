@@ -9,7 +9,7 @@ import dagger.Component
     dependencies = [CartModuleDependencies::class]
 )
 interface CartComponent {
-    fun inject(chatActivity: ChatActivity)
+    fun inject(chatActivity: FavoriteActivity)
 
     @Component.Builder
     interface Builder {
