@@ -33,6 +33,13 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragment_container)
         val bottomNavigationView = binding.bottomNavigation
 
+        val toolbar = binding.topAppBar
+        setSupportActionBar(toolbar)
+
+        navController.addOnDestinationChangedListener{_, destination, _ ->
+            supportActionBar?.title = destination.label
+        }
+
         bottomNavigationView.setupWithNavController(navController)
 
 

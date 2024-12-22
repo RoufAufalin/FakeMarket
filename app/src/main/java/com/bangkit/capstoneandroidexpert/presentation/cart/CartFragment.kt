@@ -1,4 +1,4 @@
-package com.bangkit.capstoneandroidexpert.presentation.favorite
+package com.bangkit.capstoneandroidexpert.presentation.cart
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,17 +9,15 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bangkit.capstoneandroidexpert.R
 import com.bangkit.capstoneandroidexpert.databinding.FragmentFavoriteBinding
 import com.bangkit.capstoneandroidexpert.presentation.detail.DetailActivity
 import com.bangkit.capstoneandroidexpert.presentation.home.HomeAdapter
 import dagger.hilt.android.AndroidEntryPoint
-import com.bangkit.core.data.Result
 
 @AndroidEntryPoint
-class FavoriteFragment : Fragment() {
+class CartFragment : Fragment() {
 
-    private val favoriteViewModel: FavoriteViewModel by viewModels()
+    private val favoriteViewModel: CartViewModel by viewModels()
 
     private var _binding : FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
@@ -29,6 +27,7 @@ class FavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
 
         val adapter = HomeAdapter()
@@ -44,7 +43,7 @@ class FavoriteFragment : Fragment() {
             }
         }
 
-        favoriteViewModel.favoriteData.observe(viewLifecycleOwner) { data ->
+        favoriteViewModel.cartData.observe(viewLifecycleOwner) { data ->
             if (data != null) {
                 adapter.submitList(data)
                 binding.progressBar.visibility = View.GONE

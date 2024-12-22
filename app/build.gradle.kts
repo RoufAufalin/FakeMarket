@@ -40,7 +40,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
-    dynamicFeatures += setOf(":ChatFeature")
+    dynamicFeatures += setOf(":FavoriteFeature")
 
     hilt {
         enableAggregatingTask = false

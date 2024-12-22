@@ -1,4 +1,4 @@
-package com.bangkit.capstoneandroidexpert.presentation.favorite
+package com.bangkit.capstoneandroidexpert.presentation.cart
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class FavoriteViewModel @Inject constructor(private val productUseCase: ProductUseCase) : ViewModel() {
-    val favoriteData = productUseCase.getFavorite().asLiveData()
+class CartViewModel @Inject constructor(private val productUseCase: ProductUseCase) : ViewModel() {
+    val cartData = productUseCase.getAllCart().asLiveData()
 }

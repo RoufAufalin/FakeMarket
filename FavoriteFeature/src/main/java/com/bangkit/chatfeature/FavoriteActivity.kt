@@ -3,24 +3,17 @@ package com.bangkit.chatfeature
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.bangkit.capstoneandroidexpert.di.CartModuleDependencies
+import com.bangkit.capstoneandroidexpert.di.FavoriteModuleDependencies
 import com.bangkit.capstoneandroidexpert.presentation.detail.DetailActivity
-import com.bangkit.capstoneandroidexpert.presentation.favorite.FavoriteViewModel
 import com.bangkit.capstoneandroidexpert.presentation.home.HomeAdapter
 import com.bangkit.chatfeature.databinding.ActivityChatBinding
 import dagger.hilt.android.EntryPointAccessors
-import org.koin.core.context.loadKoinModules
-import org.koin.core.context.startKoin
 import javax.inject.Inject
 
-class ChatActivity : AppCompatActivity() {
+class FavoriteActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityChatBinding
 
@@ -33,12 +26,12 @@ class ChatActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        DaggerCartComponent.builder()
+        DaggerFavoriteComponent.builder()
             .context(this)
             .appDependencies(
                 EntryPointAccessors.fromApplication(
                     applicationContext,
-                    CartModuleDependencies::class.java
+                    FavoriteModuleDependencies::class.java
                 )
             )
             .build()
@@ -63,12 +56,12 @@ class ChatActivity : AppCompatActivity() {
         }
 
         with(binding.rv) {
-            layoutManager = GridLayoutManager(this@ChatActivity, 2)
+            layoutManager = GridLayoutManager(this@FavoriteActivity, 2)
             setHasFixedSize(true)
             this.adapter = adapter
         }
 
-        viewModel.cart.observe(this) {
+        viewModel.fav.observe(this) {
             adapter.submitList(it)
             Log.d("TAG", "onCreate: $it")
         }
