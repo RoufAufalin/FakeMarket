@@ -5,7 +5,6 @@ import com.bangkit.core.data.local.LocalDataSource
 import com.bangkit.core.data.remote.RemoteDataSource
 import com.bangkit.core.domain.repository.IProductRepository
 import com.bangkit.core.utils.AppExecutors
-import dagger.Binds
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

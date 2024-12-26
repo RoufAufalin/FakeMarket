@@ -2,7 +2,6 @@ package com.bangkit.core.di
 
 import android.content.Context
 import androidx.room.Room
-import com.bangkit.core.data.local.room.ProductDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

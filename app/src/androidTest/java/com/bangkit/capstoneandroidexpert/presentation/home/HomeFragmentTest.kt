@@ -4,15 +4,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.intent.Intents
 import androidx.test.espresso.intent.matcher.IntentMatchers.hasComponent
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import com.bangkit.capstoneandroidexpert.MainActivity
-import androidx.test.espresso.contrib.RecyclerViewActions
 import com.bangkit.capstoneandroidexpert.R
 import com.bangkit.capstoneandroidexpert.presentation.detail.DetailActivity
 import org.junit.After
-import org.junit.Assert.*
 import org.junit.Before
 import org.junit.Test
 

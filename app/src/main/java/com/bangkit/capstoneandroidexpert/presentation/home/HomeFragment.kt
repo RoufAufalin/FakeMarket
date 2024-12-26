@@ -13,7 +13,6 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bangkit.capstoneandroidexpert.databinding.FragmentHomeBinding
 import com.bangkit.capstoneandroidexpert.presentation.detail.DetailActivity
-import com.bangkit.core.data.Result
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

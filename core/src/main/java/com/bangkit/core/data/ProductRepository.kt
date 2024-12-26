@@ -1,6 +1,5 @@
 package com.bangkit.core.data
 
-import android.util.Log
 import com.bangkit.core.data.local.LocalDataSource
 import com.bangkit.core.data.remote.ApiResponse
 import com.bangkit.core.data.remote.NetworkBoundResource
@@ -10,7 +9,6 @@ import com.bangkit.core.domain.model.Product
 import com.bangkit.core.domain.repository.IProductRepository
 import com.bangkit.core.utils.AppExecutors
 import com.bangkit.core.utils.DataMapper
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

@@ -1,7 +1,5 @@
 package com.bangkit.core.utils
 
-import com.bangkit.core.data.local.entity.ProductEntity
-import com.bangkit.core.data.remote.ProductResponseItem
 import com.bangkit.core.domain.model.Product
 
 object DataMapper {

@@ -1,6 +1,5 @@
 package com.bangkit.capstoneandroidexpert.presentation.home
 
-import com.bangkit.core.data.ProductRepository
 import com.bangkit.core.domain.model.Product
 import com.bangkit.core.domain.repository.IProductRepository
 import com.bangkit.core.domain.usecase.ProductInteractor
@@ -13,7 +12,6 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.`when`
-import org.mockito.junit.MockitoJUnit
 import org.mockito.junit.MockitoJUnitRunner
 
 @RunWith(MockitoJUnitRunner::class)
