@@ -3,6 +3,7 @@ package com.bangkit.capstoneandroidexpert.presentation.home
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -61,6 +62,7 @@ class HomeFragment : Fragment() {
 
         homeViewModel.product.observe(viewLifecycleOwner) { product ->
             if (product != null) {
+                Log.d("Home Fragment", "$product")
                 when(product) {
                     is com.bangkit.core.data.Result.Success -> {
                         binding.progressBar.visibility = View.GONE
@@ -71,6 +73,7 @@ class HomeFragment : Fragment() {
                     }
                     is com.bangkit.core.data.Result.Error -> {
                         binding.progressBar.visibility = View.GONE
+                        Log.d("Home Fragment", "${product.message}")
                         Toast.makeText(context, "Error", Toast.LENGTH_SHORT).show()
                     }
                 }

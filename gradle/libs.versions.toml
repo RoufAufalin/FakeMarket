@@ -38,6 +38,8 @@ navigationUiKtx = "2.8.5"
 jetbrainsKotlinJvm = "2.0.0"
 junitVersion = "4.12"
 espressoContrib = "3.6.1"
+androidDatabaseSqlcipher = "4.5.4"
+sqliteKtx = "2.4.0"
 
 [libraries]
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
@@ -85,7 +87,8 @@ androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navi
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
 junit-junit = { group = "junit", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espressoContrib" }
-
+android-database-sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "androidDatabaseSqlcipher" }
+androidx-sqlite-ktx = { module = "androidx.sqlite:sqlite-ktx", version.ref = "sqliteKtx" }
 
 
 

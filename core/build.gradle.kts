@@ -82,4 +82,7 @@ dependencies {
     implementation(libs.androidx.fragment.ktx)
 
     implementation (libs.material.v190)
+
+    implementation(libs.android.database.sqlcipher)
+    implementation(libs.androidx.sqlite.ktx)
 }
