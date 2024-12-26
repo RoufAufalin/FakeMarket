@@ -10,7 +10,6 @@ import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bangkit.core.data.ProductRepository
 import com.bangkit.capstoneandroidexpert.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
