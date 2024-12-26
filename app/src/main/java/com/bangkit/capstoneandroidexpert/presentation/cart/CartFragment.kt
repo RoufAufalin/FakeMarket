@@ -17,7 +17,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CartFragment : Fragment() {
 
-    private val favoriteViewModel: CartViewModel by viewModels()
+    private val cartViewModel: CartViewModel by viewModels()
 
     private var _binding : FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
@@ -43,7 +43,7 @@ class CartFragment : Fragment() {
             }
         }
 
-        favoriteViewModel.cartData.observe(viewLifecycleOwner) { data ->
+        cartViewModel.cartData.observe(viewLifecycleOwner) { data ->
             if (data != null) {
                 adapter.submitList(data)
                 binding.progressBar.visibility = View.GONE
