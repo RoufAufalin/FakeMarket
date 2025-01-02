@@ -19,3 +19,26 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-dontwarn com.bangkit.core.data.ProductRepository
+-dontwarn com.bangkit.core.data.Result$Error
+-dontwarn com.bangkit.core.data.Result$Loading
+-dontwarn com.bangkit.core.data.Result$Success
+-dontwarn com.bangkit.core.data.Result
+-dontwarn com.bangkit.core.data.local.LocalDataSource
+-dontwarn com.bangkit.core.data.remote.ApiService
+-dontwarn com.bangkit.core.data.remote.RemoteDataSource
+-dontwarn com.bangkit.core.di.LocalModule
+-dontwarn com.bangkit.core.di.LocalModule_ProvideDatabaseFactory
+-dontwarn com.bangkit.core.di.LocalModule_ProvideProductDaoFactory
+-dontwarn com.bangkit.core.di.NetworkModule
+-dontwarn com.bangkit.core.di.NetworkModule_ProvideApiServiceFactory
+-dontwarn com.bangkit.core.di.NetworkModule_ProvideOkHttpClientFactory
+-dontwarn com.bangkit.core.di.RepositoryModule
+-dontwarn com.bangkit.core.di.RepositoryModule_ProvideRepositoryFactory
+-dontwarn com.bangkit.core.domain.model.Product
+-dontwarn com.bangkit.core.domain.repository.IProductRepository
+-dontwarn com.bangkit.core.domain.usecase.ProductInteractor
+-dontwarn com.bangkit.core.domain.usecase.ProductUseCase
+-dontwarn com.bangkit.core.utils.AppExecutors
+
