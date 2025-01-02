@@ -7,6 +7,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class CartViewModel @Inject constructor(private val productUseCase: ProductUseCase) : ViewModel() {
+class CartViewModel @Inject constructor(productUseCase: ProductUseCase) : ViewModel() {
     val cartData = productUseCase.getAllCart().asLiveData()
 }

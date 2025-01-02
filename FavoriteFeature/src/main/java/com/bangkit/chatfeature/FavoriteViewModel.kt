@@ -6,7 +6,7 @@ import androidx.lifecycle.asLiveData
 import com.bangkit.core.domain.usecase.ProductUseCase
 import javax.inject.Inject
 
-class CartViewModel (private val useCase: ProductUseCase): ViewModel() {
+class CartViewModel (useCase: ProductUseCase): ViewModel() {
     val fav = useCase.getFavorite().asLiveData()
 }
 

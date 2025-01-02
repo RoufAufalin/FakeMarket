@@ -23,7 +23,7 @@ abstract class NetworkBoundResource<ResultType, RequestType> {
                 }
                 is ApiResponse.Error -> {
                     onFetchFailed()
-                    emit(Result.Error<ResultType>("Error Gagal Menambah ke Database"))
+                    emit(Result.Error("Error Gagal Menambah ke Database"))
                 }
             }
         } else {

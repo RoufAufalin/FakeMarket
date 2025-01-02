@@ -23,14 +23,10 @@ class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -45,11 +41,12 @@ class HomeFragment : Fragment() {
             setHasFixedSize(true)
             this.adapter = adapter
 
-            adapter.onItemClick = {
-                val intent = Intent(activity, DetailActivity::class.java)
-                    .putExtra(DetailActivity.EXTRA_DATA, it)
-                startActivity(intent)
-            }
+        }
+
+        adapter.onItemClick = {
+            val intent = Intent(activity, DetailActivity::class.java)
+                .putExtra(DetailActivity.EXTRA_DATA, it)
+            startActivity(intent)
         }
 
         binding.chat.setOnClickListener {

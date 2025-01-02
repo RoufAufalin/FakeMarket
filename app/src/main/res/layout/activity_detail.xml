@@ -38,6 +38,7 @@
             android:id="@+id/iv_product"
             android:layout_width="match_parent"
             android:layout_height="320dp"
+            android:contentDescription="@string/ini_adalah_image"
             android:src="@color/white"
 
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,6 +59,7 @@
                 android:layout_width="28dp"
                 android:layout_height="28dp"
                 android:layout_margin="12dp"
+                android:contentDescription="@string/ini_adalah_button_favorite"
                 app:tint="@color/white"
                 android:src="@drawable/baseline_favorite_border_24"/>
         </androidx.cardview.widget.CardView>
@@ -103,6 +105,7 @@
             <ImageView
                 android:layout_width="14dp"
                 android:layout_height="14dp"
+                android:contentDescription="@string/ini_adalah_rating"
                 android:src="@drawable/baseline_star_24"
                 app:tint="@color/oren" />
 

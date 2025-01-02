@@ -88,5 +88,5 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
 
-    implementation (libs.material.v190)
+    implementation (libs.material)
 }

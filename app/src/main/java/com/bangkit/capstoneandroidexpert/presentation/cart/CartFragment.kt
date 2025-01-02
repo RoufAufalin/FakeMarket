@@ -21,9 +21,6 @@ class CartFragment : Fragment() {
 
     private var _binding : FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -57,7 +54,7 @@ class CartFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         return binding.root
     }

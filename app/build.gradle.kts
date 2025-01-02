@@ -66,8 +66,6 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.espresso.contrib)
     testImplementation(libs.junit)
-    testImplementation(libs.junit.junit)
-    testImplementation(libs.junit.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     implementation(libs.recyclerview)
@@ -78,8 +76,8 @@ dependencies {
     ksp(libs.room.compiler)
     androidTestImplementation(libs.room.testing)
 
-    androidTestImplementation (libs.androidx.junit.v115)
-    androidTestImplementation (libs.androidx.espresso.core.v351)
+    androidTestImplementation (libs.androidx.junit)
+    androidTestImplementation (libs.androidx.espresso.core)
     androidTestImplementation (libs.androidx.espresso.intents)
 
     implementation(libs.retrofit)
@@ -105,7 +103,7 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
 
-    implementation (libs.material.v190)
+    implementation (libs.material)
 
     debugImplementation (libs.leakcanary.android)
 

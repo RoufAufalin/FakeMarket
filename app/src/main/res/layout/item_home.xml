@@ -33,7 +33,7 @@
             android:layout_marginVertical="8dp"
             android:gravity="center"
             android:fontFamily="@font/opensans_bold"
-            android:text="Mulyono"
+            android:text="@string/mulyono"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_product"
@@ -43,7 +43,7 @@
             android:id="@+id/tv_category"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Category"
+            android:text="@string/category"
             android:fontFamily="@font/opensans_regular"
             android:textSize="12sp"/>
 

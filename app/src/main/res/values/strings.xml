@@ -18,4 +18,10 @@
     <string name="no">Tidak</string>
     <string name="tambahkan_ke_keranjangg">+ Keranjang</string>
     <string name="cart">Cart</string>
+    <string name="ini_adalah_image">Ini adalah image</string>
+    <string name="ini_adalah_button_favorite">Ini adalah Button Favorite</string>
+    <string name="ini_adalah_rating">Ini adalah rating</string>
+    <string name="ini_profile_rekk">Ini Profile REKK</string>
+    <string name="mulyono">Mulyono</string>
+    <string name="category">Category</string>
 </resources>

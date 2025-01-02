@@ -1,9 +1,8 @@
 package com.bangkit.capstoneandroidexpert
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.bangkit.capstoneandroidexpert.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,9 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        Log.d("repository", repository.toString())
 
-        val navController = findNavController(R.id.fragment_container)
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragment_container) as NavHostFragment
+        val navController = navHostFragment.navController
+
         val bottomNavigationView = binding.bottomNavigation
 
         val toolbar = binding.topAppBar
