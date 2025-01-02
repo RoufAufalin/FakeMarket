@@ -19,7 +19,7 @@ class NetworkModule {
 
         val hostname = "fakestoreapi.com"
         val certificatePinner = CertificatePinner.Builder()
-            .add(hostname, "sha256/101cadf2d6e603db4c0057c0823fa6014bdc5b2e6d0b3ce0bab8892f0bfa5f70")
+            .add(hostname, "sha256/ea0fa6986409a0ac379386b6979812b064a11e95ebc175f051f1b52cde290c56")
             .build()
         return OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
