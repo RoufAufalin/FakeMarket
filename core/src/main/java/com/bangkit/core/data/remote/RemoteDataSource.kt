@@ -1,5 +1,6 @@
 package com.bangkit.core.data.remote
 
+import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
@@ -13,9 +14,11 @@ class RemoteDataSource @Inject constructor (private val apiService: ApiService) 
 
         try {
             val response = apiService.getProduct()
+            Log.d("Data", "$response")
             emit(ApiResponse.Success(response))
         } catch (e: Exception) {
             emit(ApiResponse.Error(e.toString()))
+            Log.d("Error", "$e")
         }
 
     }.flowOn(Dispatchers.IO)

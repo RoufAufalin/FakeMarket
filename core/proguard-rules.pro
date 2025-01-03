@@ -21,3 +21,5 @@
 #-renamesourcefileattribute SourceFile
 -keep class com.bangkit.core.** { *; }
 -keepclassmembers class com.bangkit.core.** { *; }
+
+
